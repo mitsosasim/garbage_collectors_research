@@ -1,0 +1,58 @@
+[
+  {
+    "file": "g1-summary-table.png",
+    "odt_member": "Pictures/1000020100000711000003FA48309A85AC8510F8.png",
+    "sha256": "76f5e3811c8b31943e523a2da59241cfe415bb772593f48e618dd1d9f74bca72",
+    "report_pdf_page": 5,
+    "presentation_pdf_page": 8
+  },
+  {
+    "file": "g1-resource-table.png",
+    "odt_member": "Pictures/10000201000001D3000003F59B53D35189C19D97.png",
+    "sha256": "1315c5625d4b06052fb81a2d26751d2c0326b07d9040ca673f5402f2ad7ecdab",
+    "report_pdf_page": 5,
+    "presentation_pdf_page": 8
+  },
+  {
+    "file": "g1-cpu-memory.png",
+    "odt_member": "Pictures/10000000000009600000070872CE50E1339AB19D.png",
+    "sha256": "5c376598dc589a358267e3e4b723c5e5ade3be3eeabeb1f94f0f24960617da35",
+    "report_pdf_page": 6,
+    "presentation_pdf_page": 9
+  },
+  {
+    "file": "zgc-summary-table.png",
+    "odt_member": "Pictures/100002010000070F000003F8D3A2E80F7ADC9E9F.png",
+    "sha256": "3f236bd810b03ba012c7bc07980002ff80ae12366529c6168c84b948ef37b679",
+    "report_pdf_page": 7,
+    "presentation_pdf_page": 11
+  },
+  {
+    "file": "zgc-cpu-memory.png",
+    "odt_member": "Pictures/1000000000000960000007089F205C2193E81800.png",
+    "sha256": "87e45b9f1ccb392bf1e426b3cb68d4851594a981d02edcfb4c8e86dc2c4f5ed4",
+    "report_pdf_page": 8,
+    "presentation_pdf_page": 12
+  },
+  {
+    "file": "parallel-summary-table.png",
+    "odt_member": "Pictures/1000020100000711000003F808DC249E87D54B88.png",
+    "sha256": "334faca04dcb232d9686c02fe9f100776d137ce4673355718a6e2ad6d868c4e3",
+    "report_pdf_page": 9,
+    "presentation_pdf_page": 14
+  },
+  {
+    "file": "parallel-cpu-memory.png",
+    "odt_member": "Pictures/1000000000000960000007087476C6405188E1AE.png",
+    "sha256": "e8c7cb65ca1ae7703d7e51a7ff4a75303c39349f0ef5d7a09dedb0f238d2c45f",
+    "report_pdf_page": 10,
+    "presentation_pdf_page": 15
+  },
+  {
+    "file": "lower-bound-table.png",
+    "odt_member": "Pictures/10000201000003FD00000264600F4B68F63397FA.png",
+    "sha256": "d0e676431aea1126f8e3bf1a7d068fb45de5d9318beec8c0de8908373c531843",
+    "report_pdf_page": 12,
+    "presentation_pdf_page": 18
+  }
+]

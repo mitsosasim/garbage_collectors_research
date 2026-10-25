@@ -29,7 +29,7 @@ Use a fresh output directory. The script starts separate Parallel GC, G1, and ZG
 
 ## Plan and execute DaCapo runs
 
-The original study's logs identify **DaCapo 23.11-MR2 Chopin**, **OpenJDK 21.0.7**, eight available processors, and about 15,927 MiB reported host memory. ZGC identifies legacy single-generation mode. The current machine is not presented as the original benchmark host.
+The original study's logs identify **DaCapo 23.11-MR2 Chopin**, **OpenJDK 21.0.7**, eight available processors, and about 15,927 MiB reported host memory. ZGC identifies legacy single-generation mode. The original report and presentation additionally identify Ubuntu 20.04 and an Intel i7-3820 at 3.60 GHz; see the [source guide](RESEARCH.md#experiment-context). The current machine is not presented as the original benchmark host.
 
 Obtain the matching suite JAR separately from the [official DaCapo project](https://github.com/dacapobench/dacapobench). It is not bundled. Reproduction should record the exact JDK build, JAR checksum, host configuration, and invocation. Other JDK versions can change collector modes, supported flags, and log formats.
 
@@ -81,7 +81,7 @@ The original CSVs, workbooks, and scripts are preserved separately. Their `total
 - Its event counts divide detected start/end text counts by two, rather than counting only completed records. Its p99 falls back to the maximum for fewer than 100 observations.
 - The original Pareto script filters `parallel-` configurations while labelling the plot G1. The current frontier uses the explicitly selected metrics and actual collector labels, including same-x dominance cases.
 
-These historical files are retained as submitted. New figures are labelled as reanalysis and do not silently replace their values. Collector comparisons apply to this workload set and experiment environment. There are no confidence intervals or independent-repeat guarantees.
+These historical files are retained as submitted. New figures are labelled as reanalysis and do not silently replace their values. Collector comparisons apply to this workload set and experiment environment. There are no confidence intervals or independent-repeat guarantees. The documents describe three repetitions, but three complete, independently identified sets cannot be recovered from the supplied archive. See the [research sources](RESEARCH.md) for original CPU/memory summaries, figures, and the historical lower-bound heuristic.
 
 For background, see the [DaCapo reporting guidance](https://github.com/dacapobench/dacapobench) and [HotSpot ZGC documentation](https://docs.oracle.com/en/java/javase/21/gctuning/z-garbage-collector2.html). The supplied logs explicitly distinguish pause phases from concurrent-cycle statistics.
 

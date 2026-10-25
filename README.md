@@ -8,7 +8,7 @@ A JVM benchmarking study of Parallel GC, G1, and ZGC using DaCapo Chopin workloa
 
 **Java / HotSpot · DaCapo · Python · Bash · YAML · CSV · Matplotlib**
 
-[Run guide and metric definitions](docs/SETUP.md) · [Technical brief report](docs/report.pdf) · [Overleaf ZIP](docs/report-overleaf.zip)
+[Run guide and metric definitions](docs/SETUP.md) · [Technical brief report](docs/report.pdf) · [Overleaf ZIP](docs/report-overleaf.zip) · [Original report and presentation](docs/RESEARCH.md#references)
 
 ## Research work
 
@@ -19,6 +19,14 @@ A JVM benchmarking study of Parallel GC, G1, and ZGC using DaCapo Chopin workloa
 - Explore non-dominated runtime/pause choices without treating one configuration as universally best.
 
 The archive contains **616 primary run folders** across 22 workloads and 28 configurations. **560 outputs have passing markers**, yielding a balanced comparison across 20 workloads. Cassandra and h2o remain unconfirmed in the supplied output. The original summary CSV contains 559 rows and is preserved separately from the current reanalysis.
+
+## Original research results
+
+The [report and presentation](docs/RESEARCH.md) add the experimental host specification and CPU/memory summaries for all 28 configurations. Reported configuration-mean CPU ranges are **285.335–289.145 s for Parallel GC**, **302.025–307.910 s for G1**, and **319.920–339.755 s for ZGC**. Memory also varies substantially with heap size.
+
+![Original Parallel GC CPU and memory comparison](docs/images/original/parallel-cpu-memory.png)
+
+*Original report, p. 10; presentation, p. 15. Reported configuration means, preserved as submitted. The resource collection method cannot be reconstructed from the archive. See the [source guide](docs/RESEARCH.md#reported-cpu-and-memory-results) for the transcribed values, other collector plots, and interpretation.*
 
 ## Reproduce the analysis
 
