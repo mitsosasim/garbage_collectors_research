@@ -1,0 +1,9 @@
+/build/
+.venv/
+__pycache__/
+*.pyc
+*.jar
+docs/report/*.aux
+docs/report/*.log
+docs/report/*.out
+docs/report/main.pdf

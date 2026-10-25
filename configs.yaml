@@ -1,0 +1,299 @@
+#csd4845 Dimitris Asimakopoulos - hy446 project
+#best configs for each GC
+
+# configs.yaml
+
+# --- ParallelGC (4 configs) ---
+- name: parallel-4g-t4
+  gc: ParallelGC
+  xmx: 4g
+  pgc: 4
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: parallel-4g-t8
+  gc: ParallelGC
+  xmx: 4g
+  pgc: 8
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: parallel-8g-t4
+  gc: ParallelGC
+  xmx: 8g
+  pgc: 4
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: parallel-8g-t8
+  gc: ParallelGC
+  xmx: 8g
+  pgc: 8
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+# --- G1GC (16 configs) ---
+- name: g1-4g-p50-t4-c2
+  gc: G1GC
+  xmx: 4g
+  pause: 50
+  pgc: 4
+  cgc: 2
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: g1-4g-p50-t4-c4
+  gc: G1GC
+  xmx: 4g
+  pause: 50
+  pgc: 4
+  cgc: 4
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: g1-4g-p50-t8-c2
+  gc: G1GC
+  xmx: 4g
+  pause: 50
+  pgc: 8
+  cgc: 2
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: g1-4g-p50-t8-c4
+  gc: G1GC
+  xmx: 4g
+  pause: 50
+  pgc: 8
+  cgc: 4
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: g1-4g-p200-t4-c2
+  gc: G1GC
+  xmx: 4g
+  pause: 200
+  pgc: 4
+  cgc: 2
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: g1-4g-p200-t4-c4
+  gc: G1GC
+  xmx: 4g
+  pause: 200
+  pgc: 4
+  cgc: 4
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: g1-4g-p200-t8-c2
+  gc: G1GC
+  xmx: 4g
+  pause: 200
+  pgc: 8
+  cgc: 2
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: g1-4g-p200-t8-c4
+  gc: G1GC
+  xmx: 4g
+  pause: 200
+  pgc: 8
+  cgc: 4
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: g1-8g-p50-t4-c2
+  gc: G1GC
+  xmx: 8g
+  pause: 50
+  pgc: 4
+  cgc: 2
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: g1-8g-p50-t4-c4
+  gc: G1GC
+  xmx: 8g
+  pause: 50
+  pgc: 4
+  cgc: 4
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: g1-8g-p50-t8-c2
+  gc: G1GC
+  xmx: 8g
+  pause: 50
+  pgc: 8
+  cgc: 2
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: g1-8g-p50-t8-c4
+  gc: G1GC
+  xmx: 8g
+  pause: 50
+  pgc: 8
+  cgc: 4
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: g1-8g-p200-t4-c2
+  gc: G1GC
+  xmx: 8g
+  pause: 200
+  pgc: 4
+  cgc: 2
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: g1-8g-p200-t4-c4
+  gc: G1GC
+  xmx: 8g
+  pause: 200
+  pgc: 4
+  cgc: 4
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: g1-8g-p200-t8-c2
+  gc: G1GC
+  xmx: 8g
+  pause: 200
+  pgc: 8
+  cgc: 2
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: g1-8g-p200-t8-c4
+  gc: G1GC
+  xmx: 8g
+  pause: 200
+  pgc: 8
+  cgc: 4
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+# --- ZGC (8 configs) ---
+- name: zgc-4g-t4-c2
+  gc: ZGC
+  xmx: 4g
+  pgc: 4
+  cgc: 2
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: zgc-4g-t4-c4
+  gc: ZGC
+  xmx: 4g
+  pgc: 4
+  cgc: 4
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: zgc-4g-t8-c2
+  gc: ZGC
+  xmx: 4g
+  pgc: 8
+  cgc: 2
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: zgc-4g-t8-c4
+  gc: ZGC
+  xmx: 4g
+  pgc: 8
+  cgc: 4
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: zgc-8g-t4-c2
+  gc: ZGC
+  xmx: 8g
+  pgc: 4
+  cgc: 2
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: zgc-8g-t4-c4
+  gc: ZGC
+  xmx: 8g
+  pgc: 4
+  cgc: 4
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: zgc-8g-t8-c2
+  gc: ZGC
+  xmx: 8g
+  pgc: 8
+  cgc: 2
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false
+
+- name: zgc-8g-t8-c4
+  gc: ZGC
+  xmx: 8g
+  pgc: 8
+  cgc: 4
+  survivorRatio: 8
+  maxTenuringThreshold: 15
+  pretouch: false
+  largePages: false

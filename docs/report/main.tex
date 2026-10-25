@@ -1,0 +1,32 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=17mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,graphicx,booktabs,titlesec}
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+\usepackage[hidelinks,pdfauthor={},pdftitle={Garbage Collector Benchmarking - Technical Brief Report}]{hyperref}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}
+\begin{document}
+{\LARGE\bfseries Garbage collector benchmarking}\par
+{\large Technical Brief Report}\par
+This HY446 research project studies JVM garbage-collection tradeoffs using DaCapo Chopin. The engineering work is a configuration-driven experiment harness, log processing, aggregation, and visualization. Parallel GC, G1, and ZGC are HotSpot implementations under study, rather than collectors implemented by this repository.
+\section*{Experiment design and retained evidence}
+The 28 configurations cover 4/8\,GiB heaps, worker counts, and G1 pause targets. There are 616 primary runs across 22 workloads. Passing markers confirm 560 runs across 20 shared workloads. Cassandra and h2o remain unconfirmed. Historical headers identify DaCapo 23.11-MR2 Chopin, OpenJDK 21.0.7, and legacy single-generation ZGC.
+
+Compressed records preserve 1,796 original text files. Current analysis uses primary \texttt{gc.log} files. Earlier \texttt{gc.log.0} sidecars are retained separately because their uptime restarts and dates differ. Original summary tables are preserved alongside the raw evidence.
+\section*{Metrics and interpretation}
+The parser selects completed \texttt{GC(id) Pause ... Nms} records and supports decimal commas or points. Event-start lines, concurrent phases, and periodic statistical summaries are excluded. ZGC's concurrent-cycle summary is therefore not treated as a pause. Explicit harness-triggered collections remain included.
+
+Final-iteration runtime comes from the final matching DaCapo passing marker after warmup. Pause totals and nearest-rank p99 instead cover the complete primary JVM log. Logged pause fraction divides total completed-pause duration by the maximum logged JVM uptime. This avoids dividing whole-JVM pauses by one iteration's runtime, but it remains a logged-lifetime approximation, not an application-response latency metric.
+\begin{center}
+\includegraphics[width=.78\linewidth]{assets/runtime-pauses.png}
+\end{center}
+{\small Reanalysis of archived runs. Runtime is the geometric mean of per-workload ratios to Parallel GC with a 4\,GiB heap and four threads. The pause axis is the arithmetic mean of per-run pause-event p99 values, not a pooled p99. The axes have different measurement windows.}
+\section*{Reproduction and verification}
+The workflow exports run tables, balanced configuration summaries, and an exact two-objective Pareto table. Six tests cover completed-event parsing, locale decimals, ZGC summary exclusion, quantiles, final passing markers, same-x dominance, flag mapping, and archive coverage.
+
+A bounded Java allocation fixture completed with Parallel GC, G1, and ZGC on local JDK 17.0.20. This verifies execution and parsing, not DaCapo performance. The selected-run driver captures both output streams, records process status, applies deadlines, and uses fresh output roots. Full DaCapo execution was not repeated because its JAR was not supplied.
+
+Stronger performance conclusions require phase-aligned measurements, independent process repetitions, and controlled host conditions.
+
+Reproduction instructions and metric definitions are in the \href{https://github.com/mitsosasim/garbage_collectors_research/blob/main/docs/SETUP.md}{setup guide}.
+\end{document}
